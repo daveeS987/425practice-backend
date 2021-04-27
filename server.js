@@ -1,13 +1,14 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import Cors from 'cors';
+require('dotenv').config();
 
 import Cards from './dbCards.js';
 
 // App Config
 const app = express();
 const port = process.env.PORT || 8001;
-const connection_url = 'mongodb+srv://tinderProjectAdmin:NcvCXb1Rt5rhZAlP@tinderclonecluster.zoc79.mongodb.net/tinderDB?retryWrites=true&w=majority';
+const connection_url = process.env.MONGODB_URI;
 
 // Middlewares
 app.use(express.json());
