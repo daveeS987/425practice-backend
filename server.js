@@ -4,12 +4,11 @@ import Cors from 'cors';
 import dotenv from 'dotenv';
 dotenv.config();
 
-import Cards from './dbCards.js';
+import Cards from './cardSchema.js';
 
 // App Config
 const app = express();
 const port = process.env.PORT || 8001;
-const connection_url = process.env.MONGODB_URI;
 
 // Middlewares
 app.use(express.json());
